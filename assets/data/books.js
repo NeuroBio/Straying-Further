@@ -46,6 +46,7 @@ const Books = {
 		wordCount: `~80K`,
 		type: BookType.NOVEL,
 		genres: [Genre.PSYCHOLOGICAL_THRILLER],
+		thumbnail: '../assets/thumbnails/alpine.jpg',
 	}),
 	[BookTitles.BONE_BLOOD_1]: new Book({
 		title: BookTitles.BONE_BLOOD_1,
@@ -60,6 +61,7 @@ const Books = {
 		wordCount: `~91K`,
 		type: BookType.NOVEL,
 		genres: [Genre.DYSTOPIAN, Genre.SUPER_NATURAL],
+		thumbnail: '../assets/thumbnails/bone-and-blood.jpg',
 	}),
 	[BookTitles.CRENULATION]: new Book({
 		title: BookTitles.CRENULATION,
@@ -75,6 +77,7 @@ const Books = {
 		wordCount: 'WIP',
 		type: BookType.ANTHOLOGY,
 		genres: [Genre.HORROR, Genre.SUPER_NATURAL],
+		thumbnail: '../assets/thumbnails/crenulation.jpg',
 
 	}),
 }

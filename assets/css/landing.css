@@ -75,7 +75,7 @@ hr {
 #thumbnail {
 	float: left;
 	height: 300px;
-	width: 135px;
+	/* width: 175px; */
 	flex-shrink: 0;
 	display: inline;
 	margin-right: .5em;
