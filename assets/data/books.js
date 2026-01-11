@@ -6,7 +6,7 @@ const BookId = Object.freeze({
 
 const BookTitle = Object.freeze({
 	ALPINE: 'Alpine',
-	BONE_BLOOD_1: 'Bone and Blood (Volume 1)',
+	BONE_BLOOD_1: 'Bone and Blood (Vol. 1)',
 	CRENULATION: 'Crenulation',
 });
 

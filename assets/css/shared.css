@@ -1,10 +1,28 @@
 body {
 	background-color: rgb(27, 27, 27);
 	color: whitesmoke;
-	line-height: 1.65em;
+	line-height: 2em;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 b {
 	color: white
+}
+
+h1 {
+	font-size: 20pt;
+}
+
+h2 {
+	margin-top: 0;
+	font-size: 18pt;
+	line-height: 1.2em;
+}
+
+h3 {
+	margin-top: 0;
+	font-size: 14pt;
+}
+p, a, li, span {
+	font-size: 12pt;
 }
