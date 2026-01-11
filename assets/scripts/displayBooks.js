@@ -36,7 +36,7 @@ function setActiveBook (activeBook) {
 	console.log(activeBook)
 	activeBook.chapters.forEach((chapter) => {
 		chapters.append('li').append('a')
-			.attr('href', `./read.html?book=${activeBook.id}&chapter=${chapter.id}`)
+			.attr('href', `./read.html?${QueryParams.BOOK}=${activeBook.id}&${QueryParams.CHAPTER}=${chapter.id}`)
 			.attr('class', 'link-button')
 			.text(`${chapter.id} - ${chapter.title}`);
 	});

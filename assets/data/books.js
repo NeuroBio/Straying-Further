@@ -1,28 +1,33 @@
-const BookId = {
+const BookId = Object.freeze({
 	ALPINE: 'alpine',
 	BONE_BLOOD_1: 'bone-and-blood-1',
 	CRENULATION: 'crenulation',
-};
+});
 
-const BookTitle = {
+const BookTitle = Object.freeze({
 	ALPINE: 'Alpine',
 	BONE_BLOOD_1: 'Bone and Blood (Volume 1)',
 	CRENULATION: 'Crenulation',
-};
+});
 
-const BookType = {
+const BookType = Object.freeze({
 	NOVEL: 'Novel',
 	NOVELLA: 'Novella',
 	ANTHOLOGY: 'Short Story Anthology',
 	SHORT_STORY: 'Short Story',
-};
+});
 
-const Genre = {
+const Genre = Object.freeze({
 	HORROR: 'Horror',
 	DYSTOPIAN: 'Dystopian',
 	PSYCHOLOGICAL_THRILLER: 'Psychological Thriller',
 	SUPERNATURAL: 'Supernatural',
-}
+});
+
+const QueryParams = Object.freeze({
+	CHAPTER: 'chapter',
+	BOOK: 'book',
+});
 
 class Book {
 	constructor (params) {
