@@ -15,7 +15,7 @@ const Genre = {
 	HORROR: 'Horror',
 	DYSTOPIAN: 'Dystopian',
 	PSYCHOLOGICAL_THRILLER: 'Psychological Thriller',
-	SUPER_NATURAL: 'Super Natural',
+	SUPERNATURAL: 'Supernatural',
 }
 
 class Book {
@@ -60,7 +60,7 @@ const Books = {
 		`,
 		wordCount: `~91K`,
 		type: BookType.NOVEL,
-		genres: [Genre.DYSTOPIAN, Genre.SUPER_NATURAL],
+		genres: [Genre.DYSTOPIAN, Genre.SUPERNATURAL],
 		thumbnail: '../assets/thumbnails/bone-and-blood.jpg',
 	}),
 	[BookTitles.CRENULATION]: new Book({
@@ -76,7 +76,7 @@ const Books = {
 		`,
 		wordCount: 'WIP',
 		type: BookType.ANTHOLOGY,
-		genres: [Genre.HORROR, Genre.SUPER_NATURAL],
+		genres: [Genre.HORROR, Genre.SUPERNATURAL],
 		thumbnail: '../assets/thumbnails/crenulation.jpg',
 
 	}),
