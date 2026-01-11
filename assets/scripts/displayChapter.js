@@ -26,6 +26,10 @@ if (+chapterId === activeBook.chapters.length) {
 fetch(`../assets/chapters/${bookId}/${chapterId}.txt`)
 	.then(response => response.text())
 	.then(content => {
-		d3.select('#chapter-text').text(content);
+		const text = d3.select('#chapter-text');
+		const paragraphs = content.split(`\n\n`);
+		paragraphs.forEach((paragraph) => {
+			text.append('p').html(paragraph);
+		});
 	})
 	.catch(error => console.error('Error fetching file:', error));
