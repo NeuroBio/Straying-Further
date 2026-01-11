@@ -58,9 +58,6 @@ hr {
 	border-radius: .5em;
 }
 
-.short-blurb {
-}
-
 /* Right panel */
 #book-info {
 	border: 1px whitesmoke solid;
@@ -69,8 +66,6 @@ hr {
 	max-width: 500px;
 	padding: .5em;
 }
-
-#title {}
 
 #thumbnail {
 	float: left;
@@ -82,9 +77,6 @@ hr {
 	border-radius: .5em;
 }
 
-#blurb {
-
-}
 
 .label {
 	color: rgb(160, 160, 160);
