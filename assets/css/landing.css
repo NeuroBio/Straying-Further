@@ -1,6 +1,7 @@
 .side-by-side {
 	display: flex;
 	column-gap: 1em;
+	flex-wrap: wrap;
 }
 
 hr {
@@ -9,15 +10,15 @@ hr {
 
 /* left panel */
 #books {
-	width: 250px;
+	width: 275px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 1.5em;
 }
 
 .book {
-	width: 250px;
-	height: 140px;
+	width: 275px;
+	height: 144px;
 	overflow: hidden;
 	position: relative;
 	cursor: pointer;
@@ -42,7 +43,8 @@ hr {
 }
 
 .book h2 {
-	margin-bottom: 0;
+	overflow: hidden;
+	margin-bottom: 5px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
@@ -53,8 +55,7 @@ hr {
 
 .small-thumbnail {
 	float: left;
-	height: 100px;
-	width: 60px;
+	height: 93px;
 	flex-shrink: 0;
 	display: inline;
 	margin-right: .5em;
