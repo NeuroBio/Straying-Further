@@ -7,19 +7,25 @@
 		<meta name="author" content="Stray" />
 		<title>Straying Further</title>
 
-		<link href="assets/css/shared.css" rel="stylesheet" />
+		<link href="../assets/css/shared.css" rel="stylesheet" />
+		<link href="../assets/css/landing.css" rel="stylesheet" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	</head>
 	<body>
 		<h1>Stray</h1>
 		<hr>
-		<div>
-			<section>
-				<article>entry 1</article>
+		<div class="side-by-side">
+			<section id="books">
+				<!-- Articles populated via d3 -->
 			</section>
-			<section>
-				data 1
+			<section id="book-info">
+				<!-- info populated via d3 -->
 			</section>
 		</div>
+
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="../assets/data/books.js"></script>
+		<script src="../assets/scripts/displayBooks.js"></script>
+
 	</body>
 </html>

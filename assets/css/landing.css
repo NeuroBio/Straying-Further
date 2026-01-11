@@ -1,0 +1,55 @@
+.side-by-side {
+	display: flex;
+	column-gap: 1em;
+}
+
+#books {
+	width: 250px;
+	display: flex;
+	flex-flow: wrap;
+	row-gap: 1.5em;
+}
+
+.book {
+	width: 250px;
+	height: 135px;
+	overflow: hidden;
+	position: relative;
+}
+
+.book::after {
+	content: "...";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding-left: 5px;
+	padding-right: 5px; 
+	background: rgb(27, 27, 27);
+}
+
+.book h2 {
+	display: inline;
+}
+
+.book p {
+	display: inline;
+}
+
+.small-thumbnail {
+	float: left;
+	height: 100px;
+	width: 60px;
+	flex-shrink: 0;
+	display: inline;
+	margin-right: .5em;
+	border-radius: .5em;
+}
+
+.short-blurb {
+}
+
+#book-info {
+	border: 1px whitesmoke solid;
+	flex-grow: 1;
+	max-width: 500px;
+}
