@@ -35,7 +35,10 @@ function setActiveBook (activeBook) {
 
 	console.log(activeBook)
 	activeBook.chapters.forEach((chapter) => {
-		chapters.append('li').text(`${chapter.id} - ${chapter.title}`);
+		chapters.append('li').append('a')
+			.attr('href', `./read.html?book=${activeBook.id}&chapter=${chapter.id}`)
+			.attr('class', 'link-button')
+			.text(`${chapter.id} - ${chapter.title}`);
 	});
 }
 
