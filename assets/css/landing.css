@@ -8,19 +8,27 @@
 
 h1 {
 	position: relative;
-	line-height: 1;
+	line-height: 1.4;
 	margin: 0;
 	font-size: 70pt;
 	font-family: 'BevScript';
-	color: rgb(156, 82, 185);
 	font-weight: normal;
+	color: rgb(156, 82, 185);
+	color: transparent;
+	background-clip: text;
+	background-image: linear-gradient(190deg, rgb(196, 121, 226), rgb(137, 57, 168));
+	margin-bottom: -18px;
 }
 
 #still {
 	position: absolute;
 	font-size: 70pt;
 	left: 140px;
+	width: 200px;
 	bottom: -22px;
+	color: transparent;
+	background-clip: text;
+	background-image: linear-gradient(190deg, rgb(196, 121, 226), rgb(137, 57, 168));
 }
 
 .side-by-side {
