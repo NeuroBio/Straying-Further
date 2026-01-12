@@ -27,6 +27,7 @@ const Genre = Object.freeze({
 const QueryParams = Object.freeze({
 	CHAPTER: 'chapter',
 	BOOK: 'book',
+	PAGE: 'page',
 });
 
 class Book {

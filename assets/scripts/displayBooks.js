@@ -36,7 +36,7 @@ function setActiveBook (activeBook) {
 	let activeSection;
 	let activeSectionName;
 	let madeFirst = false;
-	const bookmark = +localStorage.getItem(activeBook.id);
+	const { chapterId: bookmark, pageId } = JSON.parse(localStorage.getItem(activeBook.id) || '{}');
 	activeBook.chapters.forEach((chapter) => {
 		if (chapter.section !== activeSectionName || !madeFirst) {
 			activeSectionName = chapter.section;
@@ -54,9 +54,11 @@ function setActiveBook (activeBook) {
 		if (bookmark === chapter.id) {
 			title = `(★) ${title}`;
 		}
+		
+		const page = pageId || 1;
 		const link = activeSection.append('li').append('a')
 			.attr('class', 'link-button')
-			.attr('href', `./read.html?${QueryParams.BOOK}=${activeBook.id}&${QueryParams.CHAPTER}=${chapter.id}`);
+			.attr('href', `./read.html?${QueryParams.BOOK}=${activeBook.id}&${QueryParams.CHAPTER}=${chapter.id}&${QueryParams.PAGE}=${page}`);
 		
 		link.append('span').text(title);
 

@@ -29,12 +29,23 @@ h1, h2 {
 	margin: 10px;
 }
 
-#chapter-text {
-	padding: 0 1em;
+#chapter-text-container {
+	padding: 0 20px;
 	max-width: 500px;
 	border: 1px rgb(156, 82, 185) solid;
 	border-radius: .5em;
 	margin-bottom: 55px;
+}
+
+.button-box-page {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+
+#spacer {
+	width: 5px;
+	height: 5px;
 }
 
 footer  {
@@ -47,7 +58,7 @@ footer  {
 	background-color: rgb(27, 27, 27);
 }
 
-.button-box {
+.button-box-footer {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 .5em;

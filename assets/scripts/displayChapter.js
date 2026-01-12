@@ -1,12 +1,14 @@
 const urlParams = new URLSearchParams(window.location.search);
 const bookId = urlParams.get(QueryParams.BOOK);
 const chapterId = +urlParams.get(QueryParams.CHAPTER);
+const pageId = +urlParams.get(QueryParams.PAGE);
+const WORD_PER_PAGE = 250;
 
 const activeBook = Books[bookId];
 const activateChapter = activeBook.chapters[chapterId - 1];
 const bookmarkButton = d3.select('#bookmark');
-console.log(+localStorage.getItem(bookId))
-if (+localStorage.getItem(bookId) === chapterId) {
+const bookmark = JSON.parse(localStorage.getItem(bookId) || '{}')
+if (bookmark.chapterId === chapterId) {
 	console.log('entered');
 	bookmarkButton.classed('bookmarked', true);
 }
@@ -24,20 +26,80 @@ if (activateChapter.subtitle) {
 		.text(activateChapter.subtitle)
 }
 
-
-
 const priorChapter = d3.select('#prior-chapter');
 if (chapterId === 1) {
 	priorChapter.remove();
 } else {
-	priorChapter.attr(`href`, `./read.html?${QueryParams.BOOK}=${activeBook.id}&${QueryParams.CHAPTER}=${chapterId - 1}`);
+	priorChapter.attr(`href`, buildReadLink({
+		book: activeBook.id,
+		chapter: chapterId - 1,
+		page: 1,
+	}));;
 }
 
 const nextChapter = d3.select('#next-chapter');
 if (+chapterId === activeBook.chapters.length) {
 	nextChapter.remove();
 } else {
-	nextChapter.attr(`href`, `./read.html?${QueryParams.BOOK}=${activeBook.id}&${QueryParams.CHAPTER}=${chapterId + 1}`)
+	nextChapter.attr(`href`, buildReadLink({
+		book: activeBook.id,
+		chapter: chapterId + 1,
+		page: 1,
+	}));
+}
+
+
+function buildReadLink ({ book, chapter, page }) {
+	return `./read.html?${
+		QueryParams.BOOK}=${book}&${
+		QueryParams.CHAPTER}=${chapter}&${
+		QueryParams.PAGE}=${page}`;
+}
+
+function buildPages (content) {
+	const paragraphs = content.split(`\n\n`);
+	const pages = [];
+	let currentPage = [];
+	paragraphs.forEach((p) => {
+		currentPage.push(p);
+		const wordCount = currentPage.join('\n\n')
+		.split(/\s+/).length;
+		if (wordCount <= WORD_PER_PAGE) {
+			return;
+		}
+
+		currentPage.shift();
+		pages.push(currentPage);
+		currentPage = [];
+	});
+
+	pages.push(currentPage);
+	return pages;
+}
+
+function addPageLinks (pageLength) {
+	console.log({ pageLength, pageId })
+	const nextPage = d3.select('#next-page');
+	if (+pageId === pageLength) {
+		nextPage.remove();
+	} else {
+		nextPage.attr(`href`, buildReadLink({
+			book: activeBook.id,
+			chapter: chapterId,
+			page: pageId + 1,
+		}));
+	}
+
+	const priorPage = d3.select('#prior-page');
+	if (+pageId === 1) {
+		priorPage.remove();
+	} else {
+		priorPage.attr(`href`, buildReadLink({
+			book: activeBook.id,
+			chapter: chapterId,
+			page: pageId - 1,
+		}));
+	}
 }
 
 function scrollToTop () {
@@ -49,17 +111,17 @@ function scrollToTop () {
 }
 
 function bookMark () {
-	const current = +localStorage.getItem(bookId);
-	if (current === chapterId) {
+	const bookmark = JSON.parse(localStorage.getItem(bookId));
+	if (bookmark.chapterId === chapterId && bookmark.pageId === pageId) {
 		localStorage.clear(bookId);
 		bookmarkButton.classed('bookmarked', false);
-		const actionText = `Removed bookmark for ${activeBook.title} at chapter: ${activateChapter.title} (${activateChapter.id}).`;
+		const actionText = `Removed bookmark for ${activeBook.title} at chapter: ${activateChapter.title} (${activateChapter.id}), page ${pageId}.`;
 		console.log(actionText);
 		window.alert(actionText);
 	} else {
-		localStorage.setItem(bookId, chapterId);
+		localStorage.setItem(bookId, JSON.stringify({ chapterId, pageId }));
 		bookmarkButton.classed('bookmarked', true);
-		const actionText = `Bookmarked ${activeBook.title} at chapter: ${activateChapter.title} (${activateChapter.id}).`;
+		const actionText = `Bookmarked ${activeBook.title} at chapter: ${activateChapter.title} (${activateChapter.id}), page ${pageId}.`;
 		console.log(actionText);
 		window.alert(actionText);
 	}
@@ -70,10 +132,9 @@ fetch(`../assets/chapters/${bookId}/${chapterId}.txt`)
 	.then(response => response.text())
 	.then(content => {
 		const text = d3.select('#chapter-text');
-		const paragraphs = content.split(`\n\n`);
-		paragraphs.forEach((paragraph) => {
-			text.append('p').html(paragraph);
-		});
+		const paragraphs = buildPages(content);
+		paragraphs.forEach((paragraph) => text.append('p').html(paragraph));
+		this.addPageLinks(pages.length);
 	})
 	.catch(error => {
 		console.error('Error fetching file:', error);
@@ -163,30 +224,9 @@ fetch(`../assets/chapters/${bookId}/${chapterId}.txt`)
 		The whole time, I had to stop myself from writing the only thought in my head: “He knows I know.”
 		`;
 
-		const paragraphs = snippet.split(`\n\n`);
-
-		const pages = [];
-		let currentPage = [];
-		paragraphs.forEach((p) => {
-			currentPage.push(p);
-			const wordCount = currentPage.join('\n\n')
-			.split(/\s+/).length;
-			if (wordCount < 275) {
-				return;
-			}
-
-			currentPage.shift();
-			pages.push(currentPage);
-			currentPage = [];
-		});
-
-		pages.push(currentPage);
-		console.log(pages.length);
-		console.log(pages[0]);
-
+		const pages = buildPages(snippet);
 		const text = d3.select('#chapter-text');
-		const activeParagraphs = pages[3];
-		activeParagraphs.forEach((paragraph) => {
-			text.append('p').html(paragraph);
-		});
+		const activeParagraphs = pages[pageId - 1];
+		activeParagraphs.forEach((paragraph) => text.append('p').html(paragraph));
+		this.addPageLinks(pages.length);
 	});
