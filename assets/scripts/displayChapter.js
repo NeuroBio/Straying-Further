@@ -71,7 +71,7 @@ function buildPages (content) {
 
 		currentPage.pop();
 		pages.push(currentPage);
-		currentPage = [];
+		currentPage = [p];
 	});
 
 	pages.push(currentPage);
@@ -143,89 +143,131 @@ fetch(`../assets/chapters/${bookId}/${chapterId}.txt`)
 	.catch(error => {
 		console.error('Error fetching file:', error);
 		// local testing
-		const snippet = `My attention was squarely set on the evergreen trees whizzing by the passenger side window.  They were fitting for the season.  However, early holiday spirit was not what kept me focused on the view.  It was part of a defense mechanism.
+		const snippet = `When the car stopped, I jolted back from the window.  I must have dozed off.  Squinting, I tried to get a sense of our surroundings.  My breath fogged the glass into an opaque, grey mass against the evening twilight.  I turned my head just enough to glimpse the red light ahead of us.  Glancing down to his seatbelt buckle, “More coffee?”
 
-		Watching the snow and forest blend into white noise dulled my senses.  That numbness was a safe space where I could almost forget myself.  My circumstances.  Almost.  Switch was driving the car.  That awful dread I always felt in his presence kept me from falling into blissful oblivion.
+“We should probably get some real food too.  We’re going to cross the border in 15 minutes, and most of Canada is moose and dead space, isn’t it?”  His fingers tapped out a syncopated rhythm on the steering wheel.  It almost riffed on the turn signal’s clicking but was slightly off.  “I’m hungry anyway.  You’re hungry too, right?”
 
-		It still feels like I am being dramatic.  When I was alone, it was easy to think I was overreacting to him.  But there was no fooling myself when we were breathing the same air.  Or his smoke.
+“Not really.”  I had not eaten since the incident the night before.
 
-		I spared a glance at the central cup holder.  His fresh carton of Crossroads cigarettes sat there unopened.  We had been on the road heading northwest for twelve hours today and six the day before.  In all that time, this supposed pack-a-day smoker had not taken a single goddamn hit.  Not even during the five-minute stops every few hours to piss out coffee before chugging more down.  It was like he had forgotten they were there.
+“Well, that’s not going to do!  You’re not going to starve on me before we even get there.  What do you want?  I think the sign said there was a McDonalds, Subway, some local diner…”
 
-		That gave him too much benefit of the doubt though.  Everything he did was calculated.  From the clothes he wore to those well-timed smiles that never quite reached his eyes.  Even that banter about trying to quit the cancer sticks.  It was a ploy so ladies would think he was a lost soul they could save.  No one saw in him what I had felt since the beginning: that well-practiced fakeness.
+“I’ll figure something out.”
 
-		We met on my first day at the job.  It was his fourth.  We were supposed to start at the same time.  The plane that should have brought me to my new life down south got grounded by an ice storm.  One of those nasty ones that periodically swept down from Canada, crippling the northeast.
+“Well, I’m sticking with you to make sure you eat.  I can’t do the demo with a skeleton.”  He laughed easily at first, but his tone fell to a mockery of suppressed concern.  “You know, I’m really worried about you.  You’ve seemed stressed lately.”
 
-		Shit like that was why I wanted to move south.  No more power outages in freezing weather.  No more falling on ice.  And—the big one—no more driving to work in six inches of unplowed snow.  Anyway, he was a local and finished training before I got into town.  Amazing the difference three days can make.
+“It’s the project.”
 
-		In that time, he turned everyone into his best friend.  He knew Clara’s favorite Starbucks Frapachi-machiat-whatever-the-fuck.  He knew the names and ages of Dave’s four kids.  He knew the scientific names of Janice’s plants and had convinced her that he too was an aspiring botanist.  I bet he had already hooked up with Ryan.  Switch was the guy who figured out how to effortlessly unclog that infernal, 15-year-old dinosaur of a printer that smelled like burnt rubber and flaking paint.
+“Yeah.  I know what you mean.”  The light turned green, and he made a right off the exit ramp.  Before this trip, I had only ridden with him twice.  And I was not exactly focused on the traffic for those occasions.  However, I swear he never made rights on red.  Even when the road was empty like it was on this night.
 
-		And then I walk in.  The dour, lanky northerner who talked too fast.  The secretary did not understand who I was or what I wanted.  The longer that awkward exchange went on, the more I felt the eyes of my future coworkers on me.
+He also never drove a fraction of a mile over the speed limit.  If he were anyone else, I would have said he was an overly cautious driver.  The reality was he did it to extend the trip those extra seconds.  So he could enforce his stifling presence on me a little bit longer.
 
-		Look, I got testier with her than I should have.  But anybody would get annoyed in my position!  I also know people only believe that excuse when they know you.  Not on first impression.  I learned that the hard way back in college.
+Wistfully, he said, “I’m looking forward to being done with this too.”
 
-		So.  I took a long breath.  I introduced myself slowly in a level tone for the fifth time.  Finally, she understood why I was there.  She handed over a key card to access the building on nights and weekends.  She rattled off a few basic office courtesy rules.  A heavy stack of forms thumped onto her desk.  Business as usual.
+He pulled into a space at the McDonalds.  No surprise.  We had gotten our coffees there too.  And ate lunch-dinner there yesterday.  I waited for him to get out first.  I had this suspicion that if he were ever in the car alone, he would drive off without me.  It was a silly fear.  He enjoyed keeping me on a tight leash.  That anxiety was one of my mutated ideas.
 
-		As she made to stand to show me where my cubicle was, Switch hurried over.  A natural blonde in top-of-the-line business casual.  He looked more like a clothing model than an office peon.  I panicked when I saw him, afraid I had walked in underdressed in my clean, but worn, button up and faded slacks.
+I think we all carry a lot more baggage than we are aware of.  I imagine it like a toxic waste barrel, buried deep underground for theoretically safe storage.  Rust eats little pin holes into it.  The radioactivity slowly seeps out into everything else, poisoning the world slowly and imperceptibly.  Thoughts and actions morph under that influence.
 
-		A quick glance around the office calmed me.  No one else was wearing brand-new digs with perfectly ironed creases.  Switch gave his signature, sparkling-white smile as he said, “Bea, let me show him to his spot.  You’re busy, and I’ve been fixing to meet the other newbie.”
+Most of the time, I can recognize my mutated reactions.  I talk myself out of those sparks of insanity.  But, with him, I never knew if my “insights” were my baggage leaking out or not.  If he was repeating some pattern from those memories, then I had to take the warning seriously.  It was safest to consider every gut feeling valid.
 
-		The secretary chuckled “your funeral” as she sat back down.
+His door slammed closed, so I opened mine and got out.  My door had barely shut before I heard the locks click.  The car beeped to tell Switch to stop pushing the lock button on the key fob.  I frowned.  My black ski jacket that was lying the back seat.  It was chilly, and I had hoped to grab it.
 
-		Eye contact has never been my strong suit.  My gaze fell to his thick, metal watchband as I took his outstretched hand.  I mimicked the “proper” handshake my how-to-interview-for-idiots class had taught me.  And then I noticed something.
+Oh well.  I had my light, denim jacket.  No need to make a fuss about the other one.  Instead, I awkwardly shoved my hands into my pockets to stay warm.  A simple task made difficult by the bandage on my left hand.  I walked around the tan car to join him.  As we walked towards the golden arches, I kept an armlength away.  Safely out of reach.
 
-		Since I have a few inches on most guys, they usually give me rough handshakes.  A silent threat, warning, “Don’t think your height means you can mess with me.”  He gave the more amicable grip I usually received from guys my height or women.  He introduced himself as, “Timothy McGanon, but we’re not so formal here.  Just Tim is fine.”
+“I guess you’re more cold-resistant than I am.” He feigned self-embarrassment as he straightened his quilted vest’s collar.  It was brand-new and cream-colored with a faux-fur hood.  Enough flair to look stylish without making him come off as a fashionista.
 
-		I mumbled back something stupid like, “Nice to meet you ‘just Tim.’”
+“Comes with the territory.”  My exhausted, flat tone was unmistakable.
 
-		He laughed the right amount at the right volume.  Taking the forms from Bea’s desk, he wrapped an arm around my shoulders.  Tugged me forward.  That motion pulled me off balance, sending me stumbling into the main office.
+He chuckled as if I had responded in the way I should have: with a dose of cheer, a dash of pretend arrogance, and a smattering of the same playfulness he affected.  He opened the glass door and grandly motioned for me to go first.  Without thinking, I glanced at his tight-cornered smile.  His white teeth barely showed between his carefully parted lips.
 
-		One by one, he pointed out our coworkers.  He provided a name and quick facts about each person.  Smiles lit up every face as he talked about them.  I cannot for the life of me remember anything he said.
+I looked down.  I shuffled in ahead of him.  This was not the time to challenge him.
 
-		I desperately tried to tie just the names to the faces.  They were fading into a jumbled blur by the fourth introduction.  By the eighth, I would have had more luck telling apart the identical, manilla-carpeted cubicles than naming my coworkers.  His name was out of my head too.  There had to be clever way to make him say it again.
+He was re-establishing our normal game conditions.  There was safety in that for me.  Even if did mean that he would be standing directly behind me in line, making the hairs on the back of my neck stand up.  I tried to ignore him and remember what I had ordered at lunch the day before.
 
-		I jolted back to reality when we stopped at an empty desk.  “This is you, and that” — he pointed to the desk directly behind us — “is me.  We’re not exactly desk mates, but I’m in talking distance if you need any help.”  His voice sounded melodic when he spoke.
+I never was fond of fast food.  It is not because it is beneath me; I can be a human garbage disposal when I put my mind to it.   Burgers and fries just never did it for me.  And I knew better than to trust anything else at a burger joint.
 
-		Everything about his aura radiated open warmth and congeniality.  Even the smoke smell on his clothes was welcoming.  I was relieved there was someone like him in the office.  I always do better when someone else exudes that kind of friendliness.  It offsets my dull presence.  I think it makes me come off as less boring and more mysterious.  People seem to like the contrast anyway.  So, I thought he would be my new foil.  I liked that possibility.
+I stepped up to the cash register, and a young gal with dirty blonde hair tied back in a ponytail greeted me.  “Hey, welcome to McDonalds!  Can I take your order?”
 
-		It was easy to smile when I forced myself to look him in the eye to thank him for showing me around.  I was even ready to spew out small-talk bullshit to ease myself into full acquaintance with him.  I got as far as the word “thanks.”
+“Yeah, can I get a wh—big mac with a… large fry and pop…”
 
-		I want to call it primal instinct.  But if it were that simple, everyone would see him for what he was.   See that his icy blue eyes were wrong.  Both distant and uncomfortably present.  The intense, unblinking, unwavering stare of a predator passively watching the herd.  Not yet hunting but seeking weakness.  Scrutinizing its camouflage through its reflection in its prey’s eyes.  That sensation touched on some deep, fragmented memory I hope I never recover.
+He nudged in beside me saying, “Make that two, but I’d like a vanilla shake instead of the coke, please.”  
 
-		“Do you want me to show you where the fridge is?”  His lilting tone contradicted his glassy eyes.  “We wouldn’t want your lunch to spoil.”  He pointed at the brown paper bag crumpled in my fist.
+The cashier asked a few more questions.  He answered them all.  His credit card swiped through the register before I could stop him.  Once the receipt was safety tucked into his wallet, he opted to hang back and wait for the order.  I retreated to the condiments stand.
 
-		I chided myself.  <i>This is person with an intense stare.  Nothing more.  The warning bells are first day nerves.</i>  Only an idiot would write off the office people-pleaser.  I just needed a second to regain my composure.  To forget what I thought I had seen.
+One click on the rumbling soft drink dispenser to get a half glass of ice.  A second for the muted hum of water to fill it up.  I sloshed my drink around, wishing it was warm enough to justify the ice.  He was still waiting for the order, rocking back and forth on his heels as if lost in thought.  I decided to look around for a place to sit in case we were taking a bona fide break from the road.
 
-		I hesitated too long.  He felt the chill in our rhythm.
+At the front booth, sat a grandfather, chatting quietly with his well-behaved grandson and granddaughter.  In the back corner, one of the restaurant employees aggressively wrote in a spiral notepad through her break.  A few tables had been left messy by disrespectful patrons.  Otherwise, nothing of note.
 
-		Somehow, that godawful stare intensified.  The left side of his lip quivered.  A motion that let me break eye contact and talk at the floor.  “No, that’s okay.  It doesn’t need to be cold.  I want to start on the security clearance forms.”
+It was like every other McDonalds we had walked into.  It dawned on me that maybe that was why he always pulled in.  The familiarity.  Did that give him a sense of control?  Knowing the foreign turf by its formulaic presentation.  That he would—
 
-		“Security clearance?  So, you’re going to be designing Alpine too?”
+“Did you pick a place to sit?”
 
-		I mumbled, “Software side, yeah.”
+Startled, I turned.  We would have locked into eye contact if Switch had been looking at me.  I got lucky that time.  He was busy picking out a straw to poke into his shake’s lid and piling too many napkins onto the food tray.  I simultaneously shook my head, shrugged, and pointed weakly at a random, clean table.
 
-		“Great!  We’ll have plenty of time to get to know each other then.”  He gave a thumbs up and another quick smile—too quick—before he headed back to his desk.
+He cut past me.  “Come on then!”  Reluctantly, I followed.  When he set the tray down, the table rocked to one side.  He wiggled it back and forth, tsking at the poor craftsmanship.
 
-		I turned to my chair shaken.  What in the hell had just happened?  It was like I was the main character in an old sci fi movie.  I had seen through the body-snatching alien’s cover.  I mean, I knew that was crazy.  Aliens are not real.  Or, at worst, they are micro-dust critters living in other galaxies.  They will never find their way here.
+“We don’t have to sit here.”
 
-		Thankfully, at least I <i>think</i> thankfully, my gut ignored my brain’s babbling rationalizations.  <i>Danger.  Warning.  Imposter.</i>
+“No, I’ve got this.”
 
-		He had placed the paperwork on my desk’s right side.  I slid it to the center, pushing a keyboard aside to make space.  Soothing, predictable, unnecessary bureaucracy.  That was precisely what I needed to drown myself in now.
+He was already picking up most of the napkins and folding them in half.  He stooped down and shoved them under the shortest table leg.  When he tried to rock the table back and forth again, it held steady.  He placed himself in a chair and rotated the tray, so his food was closest to him.
 
-		I reached out to where I expected my pen mug to be.  It was not there.  Of course not.  New job, dumbass.  It was not going to come with a junky, dark-stained mug.  One with a snarky quote about managers and meetings.  One that got cracked from being too well-loved.
+I sat opposite, taking one of the two remaining napkins.  I tried not to wonder if he had followed my gaze earlier and had somehow predicted that I would pick the table that rocked.  How he would have known it rocked was another mystery I did not want answered.
 
-		And maybe I dropped the poor thing on that dingey garage machine shop’s concrete floor.  The mug had stayed in one piece but would never hold fluid again.  That memory from the old job is still so vivid.  Whining circular table saws spewing piney dust.  Smoldering heat as blow torches sealed together metal joints.  The endless, stinging splinters that turned us into walking pin cushions.
+Out of nowhere, he said, “You did a good job today.”
 
-		“Looks like you could use this.”
+I paused.  All we had done was drive and buy coffee.  He had barely even spoken before we stopped here.  I had done nothing worthy of praise, real or sarcastic.  He patiently unwrapped his burger and picked at his fries.  I caved.  “With what?”
 
-		I flinched.
+“You didn’t say ‘whopper’ this time.  You almost did, but you didn’t.”  He took a long sip of his shake.  “I would have taken you to Burger King instead, but I haven’t seen any.”
 
-		He dropped a ball point pen onto my forms.  “It’s at the end of its ink life, so don’t worry about using it up or giving it back.”
+I muttered, “It doesn’t make a difference.”
 
-		I murmured a thanks without turning my head.  He waited, daring me to look up at him.  I refused to bite.  When he left my peripheral vision, I started breathing again.  Tiny, frantic, pants in time with my racing pulse, threatening a heart attack.
+“It most certainly does!”
 
-		My hands shook as I picked up the pen.  It made jagged, wobbly spirals as ink started flowing.  It scrawled inconsistent letters in the boxes.  I have never taken so long to print my name.  To complete a simple form.
+I had nothing to say to that.  I hoped that meant we could eat in silence.
 
-		The whole time, I had to stop myself from writing the only thought in my head: “He knows I know.”
+He picked up a new conversation.  “I don’t mean to pry, but why did you order a coke if you wanted ice water?  You’ve done it twice.  You can just ask for water.”
+
+I saw little strategic value for him in the truth, so I admitted, “I don’t want to be the guy who just orders water at a restaurant.  Even if it’s fast food.”
+
+“But you ordered the rest of a meal.”
+
+“It’s the principle of the thing.”  That seemed to throw him.  He filled the silence with a neutral “ah” before grabbing his burger.  I fidgeted with the rim of my cup.  “You didn’t have to pay for me.”  I resisted the urge to tack on a softening statement like, “I’m not complaining though.”
+
+“I thought that, <i>maybe</i>, if I bought your dinner, it would make you feel guilty enough to eat.  Was I right?”
+
+A stupid question since my food was untouched.  I had only unfolded the napkin in front of me and then wrapped my hands protectively around my water.  I regretted adding the ice to it.  My fingers were cold now.  The condensation on the plastic-y paper was seeping into the gauze on my hand, irritating the cut.  I should have asked to get my ski jacket earlier.
+
+His fingers tapped as he waited for me to respond.
+
+I licked my lips and finally met his eyes.  Quietly, “Are you going to pretend that last night never happened?”
+
+His pupils dilated.  “What happened last night?”
+
+“Okay.”  I started to look down, but his hand shot out, grabbing my wrist.
+
+“You should eat.”
+
+His loose grip was paralyzing.  “I c-can’t do that until you let go.”
+
+He made a show of contemplating my words.  Slowly, he released me.  His hand retracted to the middle of the table.  Far enough away to give me space.  Close enough to make the continued threat obvious.
+
+I took the foil-paper lump containing my burger and unwrapped it.  He sipped at his shake calmly, but I felt those blackhole, blue eyes scrutinizing every crinkle.  I took one bite, chewing and swallowing mechanically.
+
+He hummed in approval and pulled his hand back to resume eating.  Between mouthfuls, “You’re going to thank me later.  Going all day without food is bad for you.”
+
+“Isn’t the water diet supposed to be some weird cleansing thing?” There was no repressing my bitterness.  I had not tasted any of the food I was inserting into my mouth.
+
+He grabbed a fry from my untouched fry cup and waved it around as he explained, “It’s the <i>water</i> diet, not the <i>coffee</i> diet.”  His offhand was still tapping out that same rhythm from the car.  I least I think it was the same.  “Also, once we reach the hotel, I call first dibs on the bathroom if you’re planning to lock yourself in there all night again.  I wanted to shower this morning, but you made that impossible.  I intend to shower tonight to make up for it.”
+
+I froze mid swallow and choked, sputtering burger bits onto the table.  The coughing fit that followed left me wheezing.  The little granddaughter at the other table must have thought it was funny.  I heard her giggle before her grandfather shushed her.  I took a big gulp of water. 
+
+I had just found my breath when Switch said, “And don’t stop eating.”  I barely heard him over the throbbing pain in my skull.  It screamed for external validation that this was not normal.  His nonchalance was bullshit.  After what had happened last night, after what I had almost done—!
+
+Clenching my left hand hurt.
+
+One deep breath.  I relaxed my fists.  I picked up the burger.  I took another bite.
+
+I kept telling myself that I had to save my energy for the real fights.  Turning every interaction into a contest of wills would guarantee his victory, because he never turned off.  He never stopped.  I was a visitor in his domain, and survival demanded compliance until an escape presented itself.  I had to keep going until I reached it.
 		`;
 
 		const text = d3.select('#chapter-text');
