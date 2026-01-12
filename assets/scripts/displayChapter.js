@@ -135,8 +135,8 @@ fetch(`../assets/chapters/${bookId}/${chapterId}.txt`)
 	.then(response => response.text())
 	.then(content => {
 		const text = d3.select('#chapter-text');
-		const paragraphs = buildPages(content);
-		paragraphs.forEach((paragraph) => text.append('p').html(paragraph));
+		const pages = buildPages(content);
+		pages[pageId - 1].forEach((paragraph) => text.append('p').html(paragraph));
 		this.addPageLinks(pages.length);
 	})
 	.catch(error => {
@@ -227,9 +227,8 @@ fetch(`../assets/chapters/${bookId}/${chapterId}.txt`)
 		The whole time, I had to stop myself from writing the only thought in my head: “He knows I know.”
 		`;
 
-		const pages = buildPages(snippet);
 		const text = d3.select('#chapter-text');
-		const activeParagraphs = pages[pageId - 1];
-		activeParagraphs.forEach((paragraph) => text.append('p').html(paragraph));
+		const pages = buildPages(snippet);
+		pages[pageId - 1].forEach((paragraph) => text.append('p').html(paragraph));
 		this.addPageLinks(pages.length);
 	});
