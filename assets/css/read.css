@@ -1,23 +1,32 @@
+#stretch-container {
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - 55px - 16px);
+	box-sizing: border-box;
+	margin-bottom: 55px;
+}
+
 header {
 	display: flex;
 	align-items: center;
-	margin-bottom: 1em;
+	column-gap: 1em;
 }
 
 #chapter-interface {
 	display: flex;
+	column-gap: 1em;
+	margin-left: 25px;
 	align-items: center;
-	margin-bottom: 1em;
+	margin-bottom: 5px;
 }
 
 .icon-button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	border-radius: 50%;
-	height: 2em;
-	width: 2em;
+	height: 30px;
+	width: 30px;
 	font-size: 18px;
 	cursor: pointer;
 	background-color: rgb(78, 66, 78);
@@ -26,7 +35,11 @@ header {
 }
 
 h1, h2 {
-	margin: 10px;
+	margin: 0;
+}
+
+.hide {
+	visibility: hidden;
 }
 
 #chapter-text-container {
@@ -34,13 +47,20 @@ h1, h2 {
 	max-width: 500px;
 	border: 1px rgb(156, 82, 185) solid;
 	border-radius: .5em;
-	margin-bottom: 55px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+#chapter-text {
+	flex-grow: 1;
 }
 
 .button-box-page {
 	display: flex;
 	justify-content: space-between;
 	padding: 10px 0;
+	border-top: solid 2px rgb(156, 82, 185);
 }
 
 #spacer {
@@ -56,6 +76,7 @@ footer  {
 	height: 55px;
 	z-index: 1000;
 	background-color: rgb(27, 27, 27);
+	box-sizing: border-box;
 }
 
 .button-box-footer {

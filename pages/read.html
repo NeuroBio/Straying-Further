@@ -12,59 +12,57 @@
 		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 	</head>
 	<body>
-		<header>
-			<a
-				id="back"
-				class="icon-button"
-				href="./landing.html"
-				title="Back to Home"
-			><</a>
-			<h1 id="book-title">
-				<!-- populate via d3 -->
-			</h1>
-		</header>
-		<h2 id="chapter-section">
-			<!-- populate via d3 -->
-		</h2>
-		<div id="chapter-interface">
-			<a
-				id="prior-chapter"
-				class="icon-button"
-				title="Go to Prior Chapter"
-			><</a>
-			<h2 id="chapter-title">
-				<!-- populate via d3 -->
-			</h2>
-			<a
-				id="next-chapter"
-				class="icon-button"
-				title="Go to Next Chapter"
-			>></a>
-		</div>
-		
-		<div id="optional-chapter-data">
-			<!-- populate via d3 -->
-		</div>
-
-		<article id="chapter-text-container">
-			<div id="chapter-text">
-				<!-- populate via d3 -->
-			</div>
-			<hr>
-			<div class="button-box-page">
+		<div id="stretch-container">
+			<header>
 				<a
-					id="prior-page"
+					id="back"
 					class="icon-button"
-					title="Go to Prior Page"
+					href="./landing.html"
+					title="Back to Home"
 				><</a>
-				<div id="spacer"></div>
+				<h1 id="book-title">
+					<!-- populate via d3 -->
+				</h1>
+			</header>
+			<div id="chapter-interface">
 				<a
-					id="next-page"
+					id="prior-chapter"
 					class="icon-button"
-					title="Go to Next Page"
+					title="Go to Prior Chapter"
+				><</a>
+				<h2>
+					<span id="chapter-section"></span>
+					<span id="chapter-title"></span>
+					<span id="optional-chapter-data"></span>
+					
+					<!-- populate via d3 -->
+				</h2>
+				<a
+					id="next-chapter"
+					class="icon-button"
+					title="Go to Next Chapter"
 				>></a>
 			</div>
-		</article>
+
+			<article id="chapter-text-container">
+				<div id="chapter-text">
+					<!-- populate via d3 -->
+				</div>
+				<div class="button-box-page">
+					<a
+						id="prior-page"
+						class="icon-button"
+						title="Go to Prior Page"
+					><</a>
+					<div id="spacer"></div>
+					<a
+						id="next-page"
+						class="icon-button"
+						title="Go to Next Page"
+					>></a>
+				</div>
+			</article>
+		</div>
 
 		<footer>
 			<hr>

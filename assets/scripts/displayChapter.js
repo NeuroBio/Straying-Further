@@ -14,7 +14,9 @@ if (bookmark.chapterId === chapterId) {
 }
 
 d3.select(`#book-title`).text(activeBook.title);
-d3.select(`#chapter-section`).text(activateChapter.section);
+d3.select(`#chapter-section`).text(activateChapter.section
+	? `${activateChapter.section}: `
+	: '');
 const title = activateChapter.title
 	? `${activateChapter.id} - ${activateChapter.title}`
 	: activateChapter.id;
@@ -28,7 +30,7 @@ if (activateChapter.subtitle) {
 
 const priorChapter = d3.select('#prior-chapter');
 if (chapterId === 1) {
-	priorChapter.remove();
+	priorChapter.classed('hide', true);
 } else {
 	priorChapter.attr(`href`, buildReadLink({
 		book: activeBook.id,
