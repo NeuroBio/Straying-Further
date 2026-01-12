@@ -9,7 +9,6 @@ const activateChapter = activeBook.chapters[chapterId - 1];
 const bookmarkButton = d3.select('#bookmark');
 const bookmark = JSON.parse(localStorage.getItem(bookId) || '{}')
 if (bookmark.chapterId === chapterId) {
-	console.log('entered');
 	bookmarkButton.classed('bookmarked', true);
 }
 
@@ -70,7 +69,7 @@ function buildPages (content) {
 			return;
 		}
 
-		currentPage.shift();
+		currentPage.pop();
 		pages.push(currentPage);
 		currentPage = [];
 	});
@@ -80,7 +79,6 @@ function buildPages (content) {
 }
 
 function addPageLinks (pageLength) {
-	console.log({ pageLength, pageId })
 	const nextPage = d3.select('#next-page');
 	if (+pageId === pageLength) {
 		nextPage.remove();
@@ -138,6 +136,7 @@ fetch(`../assets/chapters/${bookId}/${chapterId}.txt`)
 	.then(content => {
 		const text = d3.select('#chapter-text');
 		const pages = buildPages(content);
+		
 		pages[pageId - 1].forEach((paragraph) => text.append('p').html(paragraph));
 		this.addPageLinks(pages.length);
 	})
