@@ -6,6 +6,13 @@
     src: url('../fonts/BrevScript_PersonalUse.ttf') format('truetype'); 
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - 16px);
+	box-sizing: border-box;
+}
+
 h1 {
 	position: relative;
 	line-height: 1.4;
@@ -35,7 +42,9 @@ h1 {
 	display: flex;
 	column-gap: 15px;
 	flex-wrap: wrap;
+	align-items: flex-start;
 	row-gap: 15px;
+	flex-grow: 1;
 }
 
 hr {
@@ -100,7 +109,6 @@ hr {
 #book-info {
 	border: 1px rgb(156, 82, 185) solid;
 	border-radius: .5em;
-	flex-grow: 1;
 	max-width: 500px;
 	padding: .5em;
 }
@@ -135,6 +143,9 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-top: solid 2px rgb(156, 82, 185);
+	margin-top: 10px;
+	padding-top: 10px;
 }
 
 .link-footer-button {
