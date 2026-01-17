@@ -64,7 +64,13 @@ function buildReadLink ({ book, chapter, page }) {
 }
 
 function buildPages (content) {
-	const paragraphs = content.split(`\n\n`);
+	const paragraphs = content
+		.trim()
+		.split(`\n\n`)
+		.filter((p) => {
+			p = p.replace(`\n`, '');
+			return true;
+		});
 	const pages = [];
 	let currentPage = [];
 	paragraphs.forEach((p) => {
@@ -154,6 +160,7 @@ fetch(`../assets/chapters/${bookId}/${chapterId}.txt`)
 		const snippet = `When the car stopped, I jolted back from the window.  I must have dozed off.  Squinting, I tried to get a sense of our surroundings.  My breath fogged the glass into an opaque, grey mass against the evening twilight.  I turned my head just enough to glimpse the red light ahead of us.  Glancing down to his seatbelt buckle, “More coffee?”
 
 “We should probably get some real food too.  We’re going to cross the border in 15 minutes, and most of Canada is moose and dead space, isn’t it?”  His fingers tapped out a syncopated rhythm on the steering wheel.  It almost riffed on the turn signal’s clicking but was slightly off.  “I’m hungry anyway.  You’re hungry too, right?”
+
 
 “Not really.”  I had not eaten since the incident the night before.
 
@@ -276,6 +283,10 @@ Clenching my left hand hurt.
 One deep breath.  I relaxed my fists.  I picked up the burger.  I took another bite.
 
 I kept telling myself that I had to save my energy for the real fights.  Turning every interaction into a contest of wills would guarantee his victory, because he never turned off.  He never stopped.  I was a visitor in his domain, and survival demanded compliance until an escape presented itself.  I had to keep going until I reached it.
+
+
+
+
 		`;
 
 		const text = d3.select('#chapter-text');
