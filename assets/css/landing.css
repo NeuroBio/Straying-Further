@@ -1,5 +1,5 @@
 @font-face {
-	 font-display: swap; 
+	font-display: swap; 
     font-family: 'BevScript';
     font-style: normal;
     font-weight: 400;
@@ -33,9 +33,9 @@ h1 {
 
 .side-by-side {
 	display: flex;
-	column-gap: 1em;
+	column-gap: 15px;
 	flex-wrap: wrap;
-	row-gap: 1em;
+	row-gap: 15px;
 }
 
 hr {
