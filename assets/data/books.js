@@ -501,7 +501,7 @@ const BookList = {
 			},
 		]),
 		firstPublished: '2022',
-		completedFirstDraft: 'pending',
+		completedFirstDraft: 'Pending',
 		lastEdited: '2025',
 		thumbnail: '../assets/thumbnails/crenulation.jpg',
 
