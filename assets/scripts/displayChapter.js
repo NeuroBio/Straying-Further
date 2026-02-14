@@ -74,6 +74,9 @@ function buildPages (content) {
 	const pages = [];
 	let currentPage = [];
 	paragraphs.forEach((p) => {
+		if (/\s?---\s?/.test(p)) {
+			p = '<hr>';
+		}
 		currentPage.push(p);
 		const wordCount = currentPage.join('\n\n')
 		.split(/\s+/).length;
@@ -161,6 +164,8 @@ fetch(`../assets/chapters/${bookId}/${chapterId}.txt`)
 
 “We should probably get some real food too.  We’re going to cross the border in 15 minutes, and most of Canada is moose and dead space, isn’t it?”  His fingers tapped out a syncopated rhythm on the steering wheel.  It almost riffed on the turn signal’s clicking but was slightly off.  “I’m hungry anyway.  You’re hungry too, right?”
 
+
+---
 
 “Not really.”  I had not eaten since the incident the night before.
 
